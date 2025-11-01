@@ -5,7 +5,7 @@ from importlib.resources import files
 PATH_TO_INTERPETER = sys.executable
 CONFIG_FILE = "config.py"
 
-XDG_CONFIG_HOME: str = os.getenv("XDG_CONFIG_HOME", os.path.expanduser("~/.config"))
+XDG_CONFIG_HOME: str = os.getenv("WELD_DIR", "etc/xdg")
 WIDGET_DIR: str = os.path.join(XDG_CONFIG_HOME, "weld")
 SOCKET_PATH: str = "/tmp/weld.sock"
 TEXT_ENCODING: str = "utf-8"
